@@ -22,8 +22,6 @@ title: 猫猫每日简报
   {% endfor %}
 </ul>
 
-</div>
-
 <div id="lang-en" class="lang-section" markdown="1">
 
 Welcome to [Horizon](https://github.com/thysrael/Horizon), an AI-driven information aggregation system.
