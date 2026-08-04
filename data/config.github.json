@@ -137,7 +137,7 @@
       },
       {
         "name": "以色列《国土报》 - Haaretz Headlines",
-        "url": "https://www.haaretz.com/edition/rss/headlines",
+        "url": "https://www.haaretz.com/srv/haaretz-latest-headlines",
         "enabled": true,
         "category": "israel-news",
         "profile": "finance-news"
@@ -179,7 +179,7 @@
       },
       {
         "name": "阿里比亚电视台 (Al Arabiya 阿拉伯语)",
-        "url": "https://www.alarabiya.net/.mrss/arabic.xml",
+        "url": "https://rssforever.com/alarabiya/news",
         "enabled": true,
         "category": "arab-news",
         "profile": "finance-news"
@@ -193,7 +193,7 @@
       },
       {
         "name": "《中东报》 (Asharq Al-Awsat 阿拉伯语大报)",
-        "url": "https://aawsat.com/rss.xml",
+        "url": "https://aawsat.com/feed",
         "enabled": true,
         "category": "arab-news",
         "profile": "finance-news"
