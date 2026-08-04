@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "Horizon Summary: 2026-08-04 (EN)"
+title: "Horizon Summary: 2026-08-04 (HE)"
 date: 2026-08-04
-lang: en
+lang: he
 ---
 
 > Analyzed 160 items, but none met the importance threshold.
