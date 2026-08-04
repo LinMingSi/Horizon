@@ -1,17 +1,17 @@
-# Evaluation goal
+# 评估目标
 
-Evaluate whether a technology blog post rewards careful reading and gives technical readers durable understanding they can transfer to other work. Score the article itself, not the reputation of its author or publisher.
+评估一篇技术博客文章是否值得细细品读，以及能否为技术读者提供可迁移、复用到其他实际工作中的持久见解。仅针对文章内容本身进行打分，切勿受作者或发布平台的声誉及知名度影响。
 
-# Scoring rubric
+# 评分标准
 
-- **9-10: Exceptional.** Develops an original or unusually clear technical insight, supports it with strong evidence or first-hand engineering experience, and materially changes how a practitioner could understand or approach the problem.
-- **7-8: High value.** Provides substantial technical depth, concrete implementation experience, sound reasoning, and useful lessons that transfer beyond the immediate product or project.
-- **5-6: Useful.** Explains a real topic competently but is incremental, narrow, lightly evidenced, or mainly useful to readers already working with the exact technology.
-- **3-4: Shallow.** Repackages familiar material, lists steps without explaining tradeoffs, relies on unsupported claims, or offers little beyond documentation and release notes.
-- **0-2: Noise.** Primarily promotional, misleading, search-optimized filler, off-topic, or too incomplete to support its conclusions.
+- **9-10 分 (卓越级)**: 提出了独到或异常清晰的技术见解，拥有强有力的实证数据或一线工程实战经验支撑，能够从根本上改变技术从业者理解或解决该问题的方式。
+- **7-8 分 (高价值级)**: 具备扎实的技术深度、具体的落地实现经验、严密的推理解释，并总结出超越单一产品或项目的普适性经验教训，能够为大多数人解决产品使用时的痛点，优化了某个领域的工作流并提高了效率。
+- **5-6 分 (实用级)**: 胜任且清晰地解释了一个真实的技术议题，但内容属于渐进式微调、适用面较窄、缺乏充分证据支持，或主要仅对正在使用该特定技术的读者有参考价值。
+- **3-4 分 (浅薄级)**: 旧酒装新瓶（对已知常见内容的简单重打包），仅堆砌操作步骤而未解释技术权衡 (Tradeoffs)，依赖未经证实的断言，或内容几乎未超越官方文档与更新日志 (Release Notes)。
+- **0-2 分 (噪音/垃圾级)**: 主要为软文宣传、误导性内容、SEO 搜索引擎灌水文、偏离主题，或内容严重残缺以至于无法支撑其结论。
 
-# Evaluation guidance
+# 评估指南
 
-Consider the clarity of the motivating problem, originality of the central insight, technical depth, quality of evidence, honesty about tradeoffs and limitations, practical specificity, and long-term usefulness. Distinguish measured results from vendor claims and author opinion. Do not reward length by itself, polished marketing language, brand reputation, or novelty without evidence.
+综合考量核心问题的清晰度、核心见解的独创性、技术深度、证据质量、对技术权衡与局限性的诚实态度、实践具体度以及长期实用价值。严格区分实际测得的实验数据与厂商宣传口径或作者的主观观点。切勿仅因篇幅冗长、文笔华丽、品牌声誉或缺乏证据的新奇概念而给出高分。
 
-Use three to five specific topic tags.
+请提取 3 到 5 个具体的中文主题标签 (Topic Tags)。请始终使用中文输出评估理由与总结。
