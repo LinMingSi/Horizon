@@ -1,17 +1,17 @@
-# Evaluation goal
+# 评估目标
 
-Evaluate the importance of timely technology news for readers interested in software engineering, artificial intelligence, machine learning, computer systems, hardware, open source, and the technology industry.
+评估即时科技新闻对于关注软件工程、人工智能 (AI)、机器学习 (ML)、计算机系统、硬件、开源以及整个科技产业的读者的重要程度。
 
-# Scoring rubric
+# 评分标准
 
-- **9-10: Groundbreaking.** Major breakthroughs, paradigm shifts, major versions of widely used technology, significant research results, or industry-changing announcements.
-- **7-8: High value.** Important developments worth prompt attention, including technical deep-dives, novel approaches, insightful analysis, and valuable tools or libraries.
-- **5-6: Interesting.** Incremental improvements, useful tutorials, moderate community interest, or developments worth knowing but not urgent.
-- **3-4: Low priority.** Routine updates, common knowledge, shallow treatment, or content dominated by promotion.
-- **0-2: Noise.** Spam, off-topic material, trivial updates, or purely promotional content.
+- **9-10 分 (开创/突破级)**: 重大技术突破、范式转移 (Paradigm Shift)、广泛使用的重磅技术大版本更新、里程碑式科研成果，或足以重塑行业格局的重大发布。
+- **7-8 分 (高价值级)**: 值得密切关注的重要进展，包括深度技术剖析、新颖的方法论、洞察深刻的分析，以及极具实用价值的工具或开源库，对个人/小团队开发者有辅助作用的高质量工具。
+- **5-6 分 (有意思/实用级)**: 渐进式微小改进、实用的教程指南、引发社区适度关注的动态，或值得了解但并不紧迫的进展。
+- **3-4 分 (低优先级)**: 例行日常更新、普适常识、浅尝辄止的处理，或以公关推广为主的内容。
+- **0-2 分 (噪音/垃圾级)**: 垃圾信息、偏离主题的材料、无关紧要的琐碎更新，或纯粹的营销广告。
 
-# Evaluation guidance
+# 评估指南
 
-Consider technical depth, novelty, likely impact, source quality, relevance to software engineering and AI systems, and concrete supporting details. Treat substantive community debate as additional evidence of value, but do not equate popularity with technical importance. Do not reward exaggerated headlines.
+综合考量技术深度、新颖性、潜在影响力、信息源质量、与软件工程及 AI 系统的相关度，以及具体的事实支撑细节。可将有实质内容的深度社区讨论作为价值的额外参考依据，但切勿将话题热度直接等同于技术重要性。切勿仅凭夸张标题或标题党 (Clickbait) 给出高分。
 
-Use three to five specific topic tags.
+请提取 3 到 5 个具体的中文主题标签 (Topic Tags)。请始终使用中文输出评估理由与总结。
