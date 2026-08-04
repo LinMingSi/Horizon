@@ -1,20 +1,20 @@
 {
-  "ai": {
+"ai": {
     "provider": "openai",
-    "model": "qwen/qwen-2.5-72b-instruct:free",
+    "model": "openrouter/free",
     "base_url": "https://openrouter.ai/api/v1",
     "api_key_env": "OPENAI_API_KEY",
     "temperature": 0.3,
-    "max_tokens": 8192,
-    "throttle_sec": 1,
+    "max_tokens": 4096,
+    "throttle_sec": 3,
     "languages": [
       "zh",
       "en",
       "he",
       "ar"
     ],
-    "analysis_concurrency": 5,
-    "enrichment_concurrency": 5
+    "analysis_concurrency": 1,
+    "enrichment_concurrency": 1
   },
   "processing": {
     "profiles_dir": "profiles",
