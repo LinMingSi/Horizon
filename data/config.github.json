@@ -58,6 +58,27 @@
         "category": "finance",
         "profile": "finance-news"
       },
+        {
+    "name": "CNN - Top Stories (头条焦点)",
+    "url": "http://rss.cnn.com/rss/edition.rss",
+    "enabled": true,
+    "category": "world-news",
+    "profile": "finance-news"
+  },
+          {
+    "name": "新浪新闻 - 国内要闻焦点",
+    "url": "http://rss.sina.com.cn/news/china/focus15.xml",
+    "enabled": true,
+    "category": "china-news",
+    "profile": "finance-news"
+  },
+  {
+    "name": "新浪新闻 - 国际焦点",
+    "url": "http://rss.sina.com.cn/news/world/focus15.xml",
+    "enabled": true,
+    "category": "world-news",
+    "profile": "finance-news"
+  },
       {
         "name": "华尔街日报 - 商业",
         "url": "https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml",
