@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: 猫猫每日简报
 ---
 
 ## 文档
