@@ -1,17 +1,17 @@
 {
   "ai": {
     "provider": "openai",
-    "model": "google/gemini-2.0-flash-exp:free",
+    "model": "qwen/qwen-2.5-72b-instruct:free",
     "base_url": "https://openrouter.ai/api/v1",
     "api_key_env": "OPENAI_API_KEY",
     "temperature": 0.3,
     "max_tokens": 8192,
     "throttle_sec": 1,
     "languages": [
-        "zh",
-        "en",
-        "he",
-        "ar"
+      "zh",
+      "en",
+      "he",
+      "ar"
     ],
     "analysis_concurrency": 5,
     "enrichment_concurrency": 5
@@ -21,7 +21,7 @@
     "default_profile": "tech-news",
     "profile_settings": {
       "tech-news": {
-        "threshold": 7.0,
+        "threshold": 5.0,
         "topic_dedup": true
       },
       "tech-blog": {
@@ -29,7 +29,7 @@
         "topic_dedup": false
       },
       "finance-news": {
-        "threshold": 7.0,
+        "threshold": 5.0,
         "topic_dedup": true
       }
     }
@@ -58,19 +58,54 @@
         "category": "finance",
         "profile": "finance-news"
       },
-     {
-        "name": "少数派",
-        "url": "https://sspai.com/feed",
-        "enabled": true,
-        "category": "lifestyle",
-        "profile": "tech-blog"
-     },
       {
         "name": "华尔街日报 - 商业",
         "url": "https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml",
         "enabled": true,
         "category": "finance",
         "profile": "finance-news"
+      },
+      {
+        "name": "CNBC Finance",
+        "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664",
+        "enabled": true,
+        "category": "finance",
+        "profile": "finance-news"
+      },
+      {
+        "name": "财联社 - 24小时电报",
+        "url": "https://rssforever.com/cls/telegraph",
+        "enabled": true,
+        "category": "finance",
+        "profile": "finance-news"
+      },
+      {
+        "name": "凤凰网 - 资讯头条",
+        "url": "https://rssforever.com/ifeng/news",
+        "enabled": true,
+        "category": "general",
+        "profile": "finance-news"
+      },
+      {
+        "name": "酷安 - 酷图文精选",
+        "url": "https://rssforever.com/coolapk/tuwen",
+        "enabled": true,
+        "category": "digital",
+        "profile": "tech-blog"
+      },
+      {
+        "name": "虫部落 - 快讯",
+        "url": "https://rssforever.com/chongbuluo/news",
+        "enabled": true,
+        "category": "tech",
+        "profile": "tech-blog"
+      },
+      {
+        "name": "少数派",
+        "url": "https://sspai.com/feed",
+        "enabled": true,
+        "category": "lifestyle",
+        "profile": "tech-blog"
       },
       {
         "name": "Simon Willison",
@@ -80,189 +115,120 @@
         "profile": "tech-news"
       },
       {
-        "name": "CNBC Finance",
-        "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664",
+        "name": "BBC - World News",
+        "url": "http://feeds.bbci.co.uk/news/world/rss.xml",
         "enabled": true,
-        "category": "finance",
+        "category": "world-news",
         "profile": "finance-news"
       },
-  {
-    "name": "财联社 - 24小时电报",
-    "url": "https://rsshub.app/cls/telegraph",
-    "enabled": true,
-    "category": "finance",
-    "profile": "finance-news"
-  },
-  {
-    "name": "高盛 - Goldman Sachs Insights",
-    "url": "https://www.goldmansachs.com/insights/index.xml",
-    "enabled": true,
-    "category": "finance",
-    "profile": "finance-news"
-  },
-  {
-    "name": "摩根士丹利 - Morgan Stanley Ideas",
-    "url": "https://www.morganstanley.com/ideas/rss/ideas.xml",
-    "enabled": true,
-    "category": "finance",
-    "profile": "finance-news"
-  },
-  {
-    "name": "酷安 - 酷图文精选",
-    "url": "https://rsshub.app/coolapk/tuwen",
-    "enabled": true,
-    "category": "digital",
-    "profile": "tech-blog"
-  },
-  {
-    "name": "虫部落 - 快讯",
-    "url": "https://rsshub.app/chongbuluo/news",
-    "enabled": true,
-    "category": "tech",
-    "profile": "tech-blog"
-  },
-  {
-    "name": "FreeBuf - 极客安全新闻",
-    "url": "https://www.freebuf.com/feed",
-    "enabled": true,
-    "category": "security",
-    "profile": "tech-news"
-  },
-  {
-    "name": "凤凰网 - 资讯头条",
-    "url": "https://rsshub.app/ifeng/news",
-    "enabled": true,
-    "category": "general",
-    "profile": "finance-news"
-  },
-  {
-    "name": "BBC - World News",
-    "url": "http://feeds.bbci.co.uk/news/world/rss.xml",
-    "enabled": true,
-    "category": "world-news",
-    "profile": "finance-news"
-  },
-  {
-    "name": "CNN - International",
-    "url": "http://rss.cnn.com/rss/edition_world.rss",
-    "enabled": true,
-    "category": "world-news",
-    "profile": "finance-news"
-  },
-  {
-    "name": "ABC News - Top Stories",
-    "url": "https://abcnews.go.com/abcnews/internationalheadlines",
-    "enabled": true,
-    "category": "world-news",
-    "profile": "finance-news"
-  },
-  {
-    "name": "ILTV🇮🇱 - Israel News",
-    "url": "https://iltv.tv/rss",
-    "enabled": true,
-    "category": "israel-news",
-    "profile": "finance-news"
-  },
-  {
-    "name": "以色列🇮🇱《国土报》 - Haaretz Headlines",
-    "url": "https://www.haaretz.com/c3ition/rss/headlines",
-    "enabled": true,
-    "category": "israel-news",
-    "profile": "finance-news"
-  },
-  {
-    "name": "以色列🇮🇱《新消息报》 - Ynetnews",
-    "url": "https://www.ynetnews.com/Integration/StoryRss1854.xml",
-    "enabled": true,
-    "category": "israel-news",
-    "profile": "finance-news"
-  },
-  {
-    "name": "以色列🇮🇱《晚报》 - Maariv",
-    "url": "https://rsshub.app/maariv/news",
-    "enabled": true,
-    "category": "israel-news",
-    "profile": "finance-news"
-  },{
-    "name": "以色列🇮🇱 Ynet (希伯来语主站)",
-    "url": "https://www.ynet.co.il/Integration/StoryRss2.xml",
-    "enabled": true,
-    "category": "israel-news",
-    "profile": "finance-news"
-  },
-  {
-    "name": "以色列🇮🇱 Walla 新闻 (希伯来语头条)",
-    "url": "https://rss.walla.co.il/feed/1",
-    "enabled": true,
-    "category": "israel-news",
-    "profile": "finance-news"
-  },
-  {
-    "name": "半岛电视台 (Al Jazeera 阿拉伯语主站)",
-    "url": "https://www.aljazeera.net/aljazeerarss",
-    "enabled": true,
-    "category": "arab-news",
-    "profile": "finance-news"
-  },
-  {
-    "name": "阿里比亚电视台 (Al Arabiya 阿拉伯语)",
-    "url": "https://www.alarabiya.net/.mrss/arabic.xml",
-    "enabled": true,
-    "category": "arab-news",
-    "profile": "finance-news"
-  },
-  {
-    "name": "天空新闻阿拉伯台 (Sky News Arabia)",
-    "url": "https://www.skynewsarabia.com/rss/news.xml",
-    "enabled": true,
-    "category": "arab-news",
-    "profile": "finance-news"
-  },
-  {
-    "name": "《中东报》 (Asharq Al-Awsat 阿拉伯语大报)",
-    "url": "https://aawsat.com/rss.xml",
-    "enabled": true,
-    "category": "arab-news",
-    "profile": "finance-news"
-  },
-     {
-    "name": "OpenAI 官方新闻与博客",
-    "url": "https://rsshub.app/openai/blog",
-    "enabled": true,
-    "category": "ai-companies",
-    "profile": "tech-news",
-    "content_extractor": "trafilatura"
-  },
-  {
-    "name": "Anthropic (Claude) 官方新闻",
-    "url": "https://rsshub.app/anthropic/news",
-    "enabled": true,
-    "category": "ai-companies",
-    "profile": "tech-news",
-    "content_extractor": "trafilatura"
-  },
-  {
-    "name": "Google DeepMind 官方博客",
-    "url": "https://deepmind.google/blog/rss.xml",
-    "enabled": true,
-    "category": "ai-companies",
-    "profile": "tech-news"
-  },
-  {
-    "name": "Mistral AI 官方新闻",
-    "url": "https://mistral.ai/news/index.xml",
-    "enabled": true,
-    "category": "ai-companies",
-    "profile": "tech-news"
-  },
-  {
-    "name": "Meta AI 官方博客",
-    "url": "https://rsshub.app/meta/ai/blog",
-    "enabled": true,
-    "category": "ai-companies",
-    "profile": "tech-news",
-    "content_extractor": "trafilatura"
-  }
+      {
+        "name": "CNN - International",
+        "url": "http://rss.cnn.com/rss/edition_world.rss",
+        "enabled": true,
+        "category": "world-news",
+        "profile": "finance-news"
+      },
+      {
+        "name": "ABC News - Top Stories",
+        "url": "https://abcnews.go.com/abcnews/internationalheadlines",
+        "enabled": true,
+        "category": "world-news",
+        "profile": "finance-news"
+      },
+      {
+        "name": "以色列《国土报》 - Haaretz Headlines",
+        "url": "https://www.haaretz.com/edition/rss/headlines",
+        "enabled": true,
+        "category": "israel-news",
+        "profile": "finance-news"
+      },
+      {
+        "name": "以色列《新消息报》 - Ynetnews",
+        "url": "https://www.ynetnews.com/Integration/StoryRss1854.xml",
+        "enabled": true,
+        "category": "israel-news",
+        "profile": "finance-news"
+      },
+      {
+        "name": "以色列《晚报》 - Maariv",
+        "url": "https://rssforever.com/maariv/news",
+        "enabled": true,
+        "category": "israel-news",
+        "profile": "finance-news"
+      },
+      {
+        "name": "以色列 Ynet (希伯来语主站)",
+        "url": "https://www.ynet.co.il/Integration/StoryRss2.xml",
+        "enabled": true,
+        "category": "israel-news",
+        "profile": "finance-news"
+      },
+      {
+        "name": "以色列 Walla 新闻 (希伯来语头条)",
+        "url": "https://rss.walla.co.il/feed/1",
+        "enabled": true,
+        "category": "israel-news",
+        "profile": "finance-news"
+      },
+      {
+        "name": "半岛电视台 (Al Jazeera 阿拉伯语主站)",
+        "url": "https://www.aljazeera.net/aljazeerarss",
+        "enabled": true,
+        "category": "arab-news",
+        "profile": "finance-news"
+      },
+      {
+        "name": "阿里比亚电视台 (Al Arabiya 阿拉伯语)",
+        "url": "https://www.alarabiya.net/.mrss/arabic.xml",
+        "enabled": true,
+        "category": "arab-news",
+        "profile": "finance-news"
+      },
+      {
+        "name": "天空新闻阿拉伯台 (Sky News Arabia)",
+        "url": "https://www.skynewsarabia.com/rss/news.xml",
+        "enabled": true,
+        "category": "arab-news",
+        "profile": "finance-news"
+      },
+      {
+        "name": "《中东报》 (Asharq Al-Awsat 阿拉伯语大报)",
+        "url": "https://aawsat.com/rss.xml",
+        "enabled": true,
+        "category": "arab-news",
+        "profile": "finance-news"
+      },
+      {
+        "name": "OpenAI 官方新闻与博客",
+        "url": "https://rssforever.com/openai/blog",
+        "enabled": true,
+        "category": "ai-companies",
+        "profile": "tech-news",
+        "content_extractor": "trafilatura"
+      },
+      {
+        "name": "Anthropic (Claude) 官方新闻",
+        "url": "https://rssforever.com/anthropic/news",
+        "enabled": true,
+        "category": "ai-companies",
+        "profile": "tech-news",
+        "content_extractor": "trafilatura"
+      },
+      {
+        "name": "Google DeepMind 官方博客",
+        "url": "https://deepmind.google/blog/rss.xml",
+        "enabled": true,
+        "category": "ai-companies",
+        "profile": "tech-news"
+      },
+      {
+        "name": "Meta AI 官方博客",
+        "url": "https://rssforever.com/meta/ai/blog",
+        "enabled": true,
+        "category": "ai-companies",
+        "profile": "tech-news",
+        "content_extractor": "trafilatura"
+      }
     ],
     "reddit": {
       "enabled": false,
