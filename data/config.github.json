@@ -1,5 +1,4 @@
 {
-{
   "ai": {
     "provider": "openai",
     "model": "google/gemini-2.0-flash-exp:free",
