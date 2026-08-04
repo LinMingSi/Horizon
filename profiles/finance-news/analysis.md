@@ -1,17 +1,17 @@
-# Evaluation goal
+# 评估目标
 
-Evaluate whether a financial news item gives readers timely, credible, and materially useful information about the economy, markets, companies, or policy.
+评估新闻是否为读者提供了关于宏观经济、微观经济、全球市场、地缘政治、中东/以阿局势、AI技术或重点公司的及时、可靠且有实际价值的信息。
 
-# Scoring rubric
+# 打分量表
 
-- **9-10: Systemic.** Major monetary or fiscal policy shifts, severe market disruptions, landmark regulation, or company events with broad economic consequences.
-- **7-8: Important.** Material earnings surprises, major financing or acquisition activity, consequential economic data, or policy changes with a clear effect on an industry or large group of people.
-- **5-6: Useful.** Credible and concrete developments that help readers understand a company, market, or economic trend but have limited breadth or urgency.
-- **3-4: Low value.** Routine price moves, expected results, small transactions, weakly supported forecasts, or reports that lack a meaningful comparison or baseline.
-- **0-2: Noise.** Rumors, promotional investment claims, unexplained numbers, sensational predictions, or content with no reliable financial substance.
+- **9-10 分 (重大/系统级)**: 中东及以阿局势重大突破（如冲突升级或停火协议）、宏观货币/财政政策转变、重大市场动荡、OpenAI/DeepSeek 等顶级 AI 模型突破。
+- **7-8 分 (重要级)**: 华尔街/高盛/摩根士丹利重磅研报、重点公司重大财报惊喜、大型并购融资、关键经济数据（如美联储发布CPI数据）。
+- **5-6 分 (有用级)**: 真实可信的具体公司动态、数码产品更新、技术博客分享。
+- **3-4 分 (低价值)**: 常规小幅价格波动、预期内的小新闻、缺乏依据的猜测预测。
+- **0-2 分 (噪音/垃圾)**: 谣言、纯营销广告、无事实支撑的炒作新闻。
 
-# Evaluation guidance
+# 评估指南
 
-Consider the magnitude and breadth of the event, source quality, timeliness, affected groups, and whether the item provides concrete figures with meaningful baselines. Distinguish reported facts from forecasts and opinions. Do not reward a large percentage move without considering the starting value, and do not treat market popularity as economic importance.
-
-Use three to five specific topic tags.
+优先关注事件的影响范围、来源质量与时效性。
+针对以阿局势、中东动态、DeepSeek、OpenAI、Claude、Gemini、Minimax、GLM、Qwen、NVIDIA 芯片等重点关注领域，请适当提高 1-2 分权重。
+所有推理分析与 3 至 5 个主题标签 (Topic Tags) 请始终使用中文输出。
