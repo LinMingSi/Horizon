@@ -2,16 +2,15 @@ name: Daily Horizon Summary
 
 on:
   schedule:
-    # GitHub scheduled workflows use UTC. 20:00 UTC is 04:00 Asia/Shanghai;
-    # this intentionally runs early to offset the observed schedule delay.
+    # 00:00 UTC = 北京时间 08:00; 12:00 UTC = 北京时间 20:00
     - cron: '0 0,12 * * *'
-  workflow_dispatch:      # Allow manual trigger
+  workflow_dispatch:      # 允许手动触发运行
 
 jobs:
   daily-summary:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Needed to commit changes
+      contents: write  # 需要提交与发布权限
 
     steps:
       - name: Checkout code
@@ -35,15 +34,34 @@ jobs:
 
       - name: Run Horizon
         env:
-          # Map secrets to environment variables expected by config.json
-          # Modify these based on your data/config.github.json provider settings
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           LWN_KEY: ${{ secrets.LWN_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           HORIZON_WEBHOOK_URL: ${{ secrets.HORIZON_WEBHOOK_URL }}
-        run: uv run horizon --hours 24
+        run: uv run horizon --hours 12
+
+      - name: Distinguish Morning and Evening Summaries
+        run: |
+          HOUR=$(TZ="Asia/Shanghai" date +%H)
+          if [ "$HOUR" -lt "12" ]; then
+            TAG="morning"
+          else
+            TAG="evening"
+          fi
+          
+          DATE_STR=$(date +%Y-%m-%d)
+          
+          # 重命名 docs/_posts 下生成的静态 Markdown 网页
+          if [ -f "docs/_posts/${DATE_STR}-summary-zh.md" ]; then
+            mv "docs/_posts/${DATE_STR}-summary-zh.md" "docs/_posts/${DATE_STR}-${TAG}-summary-zh.md"
+          fi
+          
+          # 重命名 data/summaries 下的数据文件
+          if [ -f "data/summaries/horizon-${DATE_STR}-zh.md" ]; then
+            mv "data/summaries/horizon-${DATE_STR}-zh.md" "data/summaries/horizon-${DATE_STR}-${TAG}-zh.md"
+          fi
 
       - name: Set current date as environment variable
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
@@ -53,7 +71,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
-          keep_files: true  # Keep existing summaries on gh-pages branch
-          commit_message: "📝 Daily Summary: ${{ env.DATE }}"
+          keep_files: true  # 保持 gh-pages 分支上的历史简报不被清空
+          commit_message: "Daily Summary: ${{ env.DATE }}"
           publish_branch: gh-pages
           enable_jekyll: true
